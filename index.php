@@ -5,11 +5,16 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
    <div id="content" class="site-content">
-		<?php /* Start the Loop */
-			while (have_posts()) : the_post();
-				the_content();
-			endwhile; 
-		?>
+	
+
+<?php 
+	if ( have_posts() ) : 
+		// Start the Loop
+		while ( have_posts() ) : the_post(); 
+        	get_template_part( 'content-templates/content', get_post_format() );
+	    endwhile; 
+   	endif; 
+           ?>
    </div><!-- #content .site-content -->
 </div>
 <!-- #primary .content-area -->
