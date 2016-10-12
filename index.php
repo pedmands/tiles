@@ -10,7 +10,7 @@ get_header(); ?>
 		tiles_content_nav( 'nav-above' );
 		// Start the Loop
 		while ( have_posts() ) : the_post();
-        	get_template_part( 'content-templates/content', get_post_format() );
+        	get_template_part( 'template-parts/content', get_post_format() );
 	    endwhile;
 	    tiles_content_nav( 'nav-below' );
 	}else{

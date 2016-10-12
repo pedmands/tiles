@@ -5,3 +5,6 @@
           </div><!-- .site-info -->
      </footer><!-- #colophon .site-footer -->
 </div> <!-- #page .hfeed .site -->
+<?php wp_footer(); ?>
+</body>
+</html>

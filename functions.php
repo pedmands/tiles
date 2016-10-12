@@ -8,48 +8,77 @@
 
 /**
  * Used to temporarily set content width based on the theme's design.
+ *
+ * @global int $content_width
  */
-if ( ! isset( $content_width ) )
-    $content_width = 1010; 
+function tiles_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'tiles_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'tiles_content_width', 0 );
+
 if ( ! function_exists('tiles_setup')) :
 
 	function tiles_setup(){
-		require( get_template_directory() . '/inc/template-tags.php' );
-		require( get_template_directory() . '/inc/tweaks.php' );
-		/** translation textdomain */
-		load_theme_textdomain('tiles', get_template_directory() . '/languages');
-		add_theme_support('automatic-feed-links');
+	require( get_template_directory() . '/inc/template-tags.php' );
+	require( get_template_directory() . '/inc/tweaks.php' );
+	/** translation textdomain */
+	load_theme_textdomain( 'tiles', get_template_directory() . '/languages' );
+	add_theme_support( 'automatic-feed-links' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'whitenoise' ),
-		) );
+	add_theme_support( 'title-tag' );
 
-		add_theme_support( 'post-formats', array(
+	/*
+	 * Enable support for Post Thumbnails on posts and pages.
+	 */
+	add_theme_support( 'post-thumbnails' );
+
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary' => esc_html__( 'Primary', 'tiles' ),
+	) );
+
+	add_theme_support( 'post-formats', array(
 		'aside',
 		'image',
 		'video',
 		'quote',
 		'link',
-		) );
-		add_theme_support( 'html5', array(
+	) );
+	add_theme_support( 'html5', array(
 		'search-form',
 		'comment-form',
 		'comment-list',
 		'gallery',
 		'caption',
-		) );
+	) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'tiles_custom_background_args', array(
+	// Set up the WordPress core custom background feature.
+	add_theme_support( 'custom-background', apply_filters( 'tiles_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
-		) ) );
+	) ) );
+}
+endif;
+add_action( 'after_setup_theme', 'tiles_setup' );
 
 
-	} // tiles_setup
-endif; 
-add_action('after_setup_theme', 'tiles_setup');
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function tiles_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar', 'tiles' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'tiles' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'tiles_widgets_init' );
 
 // Enqueue scripts and styles
 function tiles_scripts() {
@@ -61,8 +90,8 @@ function tiles_scripts() {
 
 	wp_enqueue_script('navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20161011', true);
 
-	if (is_singular() && wp_attachment_image()) {
-		wp_enqueue_script('keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array('jquery'), '20161011' );
-	}
+	// if (is_singular() && wp_attachment_image()) {
+	// 	wp_enqueue_script('keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array('jquery'), '20161011' );
+	// }
 }
 add_action( 'wp_enqueue_scripts', 'tiles_scripts');
