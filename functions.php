@@ -17,19 +17,16 @@ function tiles_content_width() {
 add_action( 'after_setup_theme', 'tiles_content_width', 0 );
 
 if ( ! function_exists('tiles_setup')) :
-
 	function tiles_setup(){
 	require( get_template_directory() . '/inc/template-tags.php' );
 	require( get_template_directory() . '/inc/tweaks.php' );
-	/** translation textdomain */
-	load_theme_textdomain( 'tiles', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
-
 	add_theme_support( 'title-tag' );
+	
+	// Translation textdomain
+	load_theme_textdomain( 'tiles', get_template_directory() . '/languages' );
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 */
+	// Enable support for Post Thumbnails on posts and pages.
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -62,15 +59,20 @@ endif;
 add_action( 'after_setup_theme', 'tiles_setup' );
 
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
+// Register widget areas.
 function tiles_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'tiles' ),
+		'name'          => esc_html__( 'Primary Sidebar', 'tiles' ),
 		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'tiles' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Secondary Sidebar', 'tiles' ),
+		'id'            => 'sidebar-2',
 		'description'   => esc_html__( 'Add widgets here.', 'tiles' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
