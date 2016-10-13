@@ -406,12 +406,20 @@ a:active {
 }
  
 /* Small menu */
-.menu-toggle {
-    cursor: pointer;
+@media only screen and (min-width:768px){
+    .menu-toggle {
+        display: none;
+    }
 }
-.main-small-navigation .menu {
-    display: none;
+@media only screen and (max-width:767px){
+    .main-navigation ul {
+        display: none;
+    }
+    .main-navigation.toggled ul {
+        display: block;
+    }
 }
+
 /*//////// 2.1 Menus ////////*/
 .site-content .site-navigation {
     margin: 0 0 1.5em;
