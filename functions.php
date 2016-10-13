@@ -90,8 +90,8 @@ function tiles_scripts() {
 
 	wp_enqueue_script('navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20161011', true);
 
-	// if (is_singular() && wp_attachment_image()) {
-	// 	wp_enqueue_script('keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array('jquery'), '20161011' );
-	// }
+	if (is_singular() && wp_attachment_is_image()) {
+		wp_enqueue_script('keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array('jquery'), '20161011' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'tiles_scripts');
