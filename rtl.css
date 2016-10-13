@@ -1,1 +1,7 @@
-rtl.css
+/*
+Theme Name: Tiles
+*/
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
