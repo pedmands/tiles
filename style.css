@@ -406,7 +406,7 @@ a:active {
 }
  
 /* Small menu */
-<<<<<<< HEAD
+
 @media only screen and (min-width: 768px){
    .menu-toggle {
     display: none;
@@ -423,7 +423,7 @@ a:active {
 .menu-toggle {
     cursor: pointer;
 }
-=======
+
 @media only screen and (min-width:768px){
     .menu-toggle {
         display: none;
@@ -437,7 +437,7 @@ a:active {
         display: block;
     }
 }
->>>>>>> sass
+
 
 /*//////// 2.1 Menus ////////*/
 .site-content .site-navigation {
