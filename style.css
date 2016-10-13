@@ -14,18 +14,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*//////// Tiles - Table of Contents ////////
 *
-*	1.0 Reset
-*		1.1 Rebuild
-*		1.2 Alignment
-*	2.0 Menus
-*		2.1 Navigation
+*	1.0 Normalize
+		1.1 Reset
+*		1.2 Rebuild
+*		1.3 Alignment
+*	2.0 Navigation
+*		2.1 Menus
 *		2.2 Widgets
-*	3.0 Content
-* 		3.1 Asides
-*		3.2 Media
+*		2.3 Links
+*	3.0 Site Content
+*		3.1 Posts & Pages
+*		3.2 Single
+*		3.3 Header
+*		3.4 Footer
+* 		3.5 Asides
+*		3.6 Comments
 *	4.0 Layout & Structure
-*	5.0 Posts & Pages
-*		5.1 Comments
+*	5.0 Media
+		5.1 Captions
+		5.2 Galleries
+		5.3 Images
 */
 
 
@@ -344,7 +352,7 @@ a:active {
     position: absolute !important;
 }
 
-/*//////// 2.0 Menus ////////*/
+/*//////// 2.0 Navigation ////////*/
 .main-navigation {
     clear: both;
     display: block;
@@ -404,7 +412,7 @@ a:active {
 .main-small-navigation .menu {
     display: none;
 }
-/*//////// 2.1 Navigation ////////*/
+/*//////// 2.1 Menus ////////*/
 .site-content .site-navigation {
     margin: 0 0 1.5em;
     overflow: hidden;
@@ -429,8 +437,21 @@ a:active {
     display: none;
 }
 
-/*//////// 3.0 Content ////////*/
+/*//////// 2.3 Links ////////*/
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+
+/*//////// 3.0 Site Content ////////*/
+
+
+/*//////// 3.1 Posts & Pages ////////*/
 .sticky {
+}
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
 }
 .hentry {
     margin: 0 0 1.5em;
@@ -441,42 +462,28 @@ a:active {
 .byline {
     display: none;
 }
+
+/*//////// 3.2 Single ////////*/
 .single .byline,
 .group-blog .byline {
     display: inline;
 }
-.entry-content,
-.entry-summary {
-    margin: 1.5em 0 0;
-}
-.page-links {
-    clear: both;
-    margin: 0 0 1.5em;
-}
-/*//////// 3.1 Asides ////////*/
+
+/*//////// 3.3 Header ////////*/
+
+/*//////// 3.4 Footer ////////*/
+
+
+/*//////// 3.5 Asides ////////*/
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
     display: none;
 }
-/*//////// 3.2 Media ////////*/
-.site-header img,
-.entry-content img,
-.comment-content img,
-.widget img {
-    max-width: 100%; /* Fluid images for posts, comments, and widgets */
+/*//////// 3.6 Comments ////////*/
+.bypostauthor {
 }
-.site-header img,
-.entry-content img,
-img[class*="align"],
-img[class*="wp-image-"] {
-    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-.site-header img,
-.entry-content img,
-img.size-full {
-    max-width: 100%;
-    width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
-}
+
+/*//////// 5.1 Captions ////////*/
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
     border: none;
@@ -509,6 +516,7 @@ img.size-full {
 }
 .gallery-caption {
 }
+/*//////// 5.2 Galleries ////////*/
 .site-content .gallery a img {
     border: none;
     height: auto;
@@ -529,6 +537,26 @@ object {
     max-width: 100%;
 }
 
+/*//////// 5.3 Images ////////*/
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+    max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+.site-header img,
+.entry-content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+    max-width: 100%;
+    width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+
 /*//////// 4.0 Layout & Structure ////////
  Add the rules here for the layout you want from  the directory layouts/.
  I.e. if you want a sidebar-content-sidebar layout, add the code from 
@@ -536,6 +564,3 @@ object {
 */
 
 
-/*//////// 5.1 Comments ////////*/
-.bypostauthor {
-}
