@@ -1,0 +1,19 @@
+{
+  "name": "tiles",
+  "version": "1.0.0",
+  "description": "A WordPress starter theme w/ Sass.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedmands/tiles.git"
+  },
+  "author": "Preston Edmands",
+  "license": "MIT",
+  "homepage": "https://github.com/pedmands/tiles#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

@@ -54,6 +54,16 @@
 .menu-toggle {
     cursor: pointer;
 }
-.main-small-navigation .menu {
+@media only screen and (min-width: 768px){
+   .menu-toggle {
     display: none;
+   } 
+}
+@media only screen and (max-width:767px){
+    .main-navigation ul{
+        display:none;
+    }
+    .main-navigation.toggled ul {
+        display:block;
+    }
 }
