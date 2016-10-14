@@ -13,3 +13,9 @@
 .byline {
     display: none;
 }
+.post {
+	background-color: #fff;
+	&:first-child{
+		margin-top: 70px;
+	}
+}

@@ -1,0 +1,20 @@
+/* Sidebar - Content - Sidebar */
+.column-wrap {
+	position: relative;
+}
+#main {
+	margin: 0 20%;
+}
+#secondary {
+	width: 250px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+}
+#tertiary {
+	width: 250px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}

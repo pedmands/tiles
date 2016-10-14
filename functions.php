@@ -11,10 +11,10 @@
  *
  * @global int $content_width
  */
-function tiles_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'tiles_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'tiles_content_width', 0 );
+// function tiles_content_width() {
+// 	$GLOBALS['content_width'] = apply_filters( 'tiles_content_width', 640 );
+// }
+// add_action( 'after_setup_theme', 'tiles_content_width', 0 );
 
 if ( ! function_exists('tiles_setup')) :
 	function tiles_setup(){

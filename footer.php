@@ -21,6 +21,6 @@
 </div><!-- #page .hfeed .site -->
  
 <?php wp_footer(); ?>
- 
+ </div> <!-- column-wrap -->
 </body>
 </html>

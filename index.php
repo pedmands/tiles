@@ -2,12 +2,11 @@
 * The main template file.
 */
 get_header(); ?>
-
+<div class="column-wrap">
 <div id="primary" class="content-area">
-   <div id="content" class="site-content">
+   <main id="main" class="site-main" role="main">
 <?php
 	if ( have_posts() ) {
-		tiles_content_nav( 'nav-above' );
 		// Start the Loop
 		while ( have_posts() ) : the_post();
 			/* Include the Post-Format-specific template for the content.
@@ -21,7 +20,7 @@ get_header(); ?>
 		get_template_part('no-results','index');
 	}
            ?>
-   </div><!-- #content .site-content -->
+   </main><!-- #main .site-main -->
 </div>
 <!-- #primary .content-area -->
 
