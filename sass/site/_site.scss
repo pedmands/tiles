@@ -1,3 +1,5 @@
+@import "global";
+
 /*//////// 3.1 Posts & Pages ////////*/
 @import "posts-and-pages";
 
@@ -15,3 +17,6 @@
 
 /*//////// 3.6 Comments ////////*/
 @import "comments";
+
+/*//////// 3.7 Accessibility ////////*/
+@import "accessibility";
