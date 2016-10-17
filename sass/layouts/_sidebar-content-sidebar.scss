@@ -1,25 +1,24 @@
 /* Sidebar - Content - Sidebar */
-.column-wrap {
+.site-content {
+	width: 100%;
+	overflow: hidden;
 	position: relative;
 }
+.col-1 {
+	float: left;
+	width: 21.25%;
+	margin-right: 5%;
+}
+.col-2 {
+	float: left;
+	width: 47.5%;
+	margin-right: 5%;
+}
+.last {margin-right: 0;}
 #primary {
-	padding: 10px calc(50% - 340px);
+	margin-left: 26.25%;
 }
 #secondary {
-	width: 250px;
-	display: inline-block;
 	position: absolute;
-	top: 0;
-}
-#tertiary {
-	width: 250px;
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-@media only screen and (max-width: 1190px){
-	#secondary, #tertiary {
-		width: 150px;
-	}
+	left: 0;
 }

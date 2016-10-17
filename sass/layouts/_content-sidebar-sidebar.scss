@@ -1,23 +1,16 @@
 /* Content - Sidebar - Sidebar */
-#primary {
-float: left;
-width: 100%;
+.site-content {
+	width: 100%;
+	overflow: hidden;
 }
-#content {
-margin: 0 40% 0 0;
+.col-1 {
+	float: left;
+	width: 21.25%;
+	margin-right: 5%;
 }
-#main .widget-area {
-float: left;
-overflow: hidden;
-width: 20%;
+.col-2 {
+	float: left;
+	width: 47.5%;
+	margin-right: 5%;
 }
-#secondary { /* Sidebar 1 */
-margin: 0 0 0 -40%;
-}
-#tertiary { /* Sidebar 2 */
-margin: 0 0 0 -20%;
-}
-.site-footer {
-clear: both;
-width: 100%;
-}
+.last {margin-right: 0;}

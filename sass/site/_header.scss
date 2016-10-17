@@ -1,5 +1,7 @@
 .site-header {
 	position: relative;
-	margin-bottom: 20px;
 	background-color: #fff;
+	.site-title, .site-description {
+		text-align: center;
+	}
 }

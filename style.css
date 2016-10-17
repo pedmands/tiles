@@ -404,7 +404,7 @@ h1 {
     margin-left: 0.8em; }
   .main-navigation a {
     display: block;
-    padding: 32px 16px;
+    padding: 16px;
     font-weight: 400;
     text-decoration: none;
     line-height: 1.6em;
@@ -550,9 +550,6 @@ h1 {
 
   .main-navigation.toggled ul {
     overflow-y: visible; }
-
-  .main-navigation a {
-    min-height: 4em; }
 
   /* Display the menu items in a horizontal order */
   .main-navigation li {
@@ -729,8 +726,6 @@ h1 {
 
 .post {
   background-color: #fff; }
-  .post:first-child {
-    margin-top: 70px; }
 
 /*//////// 3.2 Single ////////*/
 .single .byline,
@@ -740,8 +735,9 @@ h1 {
 /*//////// 3.3 Header ////////*/
 .site-header {
   position: relative;
-  margin-bottom: 20px;
   background-color: #fff; }
+  .site-header .site-title, .site-header .site-description {
+    text-align: center; }
 
 /*//////// 3.4 Footer ////////*/
 /*//////// 3.5 Asides ////////*/
@@ -780,29 +776,6 @@ h1 {
   /* Above WP toolbar. */ }
 
 /*//////// 4.0 Layouts & Structure ////////*/
-/* Sidebar - Content - Sidebar */
-.column-wrap {
-  position: relative; }
-
-#primary {
-  padding: 10px calc(50% - 340px); }
-
-#secondary {
-  width: 250px;
-  display: inline-block;
-  position: absolute;
-  top: 0; }
-
-#tertiary {
-  width: 250px;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0; }
-
-@media only screen and (max-width: 1190px) {
-  #secondary, #tertiary {
-    width: 150px; } }
 /*//////// 5.0 Media ////////*/
 /*//////// 5.1 Captions ////////*/
 .entry-content img.wp-smiley,

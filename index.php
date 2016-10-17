@@ -2,7 +2,7 @@
 * The main template file.
 */
 get_header(); ?>
-<div id="primary" class="content-area">
+<div id="primary" class="col-2">
    <?php
 	if ( have_posts() ) {
 		// Start the Loop

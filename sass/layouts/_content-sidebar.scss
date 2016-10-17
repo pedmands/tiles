@@ -1,21 +1,14 @@
 /* Content - Sidebar */
-#primary {
-float: left;
-margin: 0 -25% 0 0;
-width: 100%;
+.col-1 {
+   float: right;
+   width: 33%;
+   margin-right: 0;
 }
-#content {
-margin: 0 25% 0 0;
+.col-2 {
+   float: left;
+   width: 65%;
+   margin-right: 2%;
 }
-#secondary { /* Sidebar 1 */
-float: right;
-overflow: hidden;
-width: 25%;
-}
-#tertiary { /* Sidebar 2 */
-clear: right;
-}
-.site-footer {
-clear: both;
-width: 100%;
+#tertiary {
+   display: none;
 }
