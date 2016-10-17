@@ -396,7 +396,7 @@ h1 {
     margin-left: 0.8em; }
   .main-navigation a {
     display: block;
-    padding: 0.8em 2em;
+    padding: 32px 16px;
     font-weight: 400;
     text-decoration: none;
     line-height: 1.6em;
@@ -527,7 +527,6 @@ h1 {
   .main-navigation.toggled {
     position: relative;
     margin: 0 auto;
-    padding: 0 3.5em;
     background-color: #000; }
 
   .nav-menu {
@@ -778,7 +777,7 @@ h1 {
   position: relative; }
 
 #main {
-  margin: 0 20%; }
+  margin: 0 calc(50% - ($content-width/2)); }
 
 #secondary {
   width: 250px;

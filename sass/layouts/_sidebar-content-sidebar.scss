@@ -3,7 +3,7 @@
 	position: relative;
 }
 #main {
-	margin: 0 20%;
+	margin: 0 calc(50% - ($content-width/2));
 }
 #secondary {
 	width: 250px;
