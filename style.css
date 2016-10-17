@@ -13,6 +13,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 /*//////// Tiles - Table of Contents ////////
 *
+*  0.0 Variables
+      0.1 Colors
+      0.2 Structure
+      0.3 Typography
 *	1.0 Normalize
 *		1.1 Reset
 *		1.2 Rebuild
@@ -36,6 +40,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 *		5.2 Galleries
 *		5.3 Images
 */
+/*//////// 0.0 Variables ////////*/
+/*//////// 0.1 Colors ////////*/
+/*//////// 0.2 Structure ////////*/
+/*//////// 0.3 Typography ////////*/
 /*//////// 1.0 Normalize ////////*/
 /*//////// 1.1 Reset ////////*/
 html, body, div, span, applet, object, iframe,
@@ -776,8 +784,8 @@ h1 {
 .column-wrap {
   position: relative; }
 
-#main {
-  margin: 0 calc(50% - ($content-width/2)); }
+#primary {
+  padding: 10px calc(50% - 340px); }
 
 #secondary {
   width: 250px;
@@ -792,6 +800,9 @@ h1 {
   top: 0;
   right: 0; }
 
+@media only screen and (max-width: 1190px) {
+  #secondary, #tertiary {
+    width: 150px; } }
 /*//////// 5.0 Media ////////*/
 /*//////// 5.1 Captions ////////*/
 .entry-content img.wp-smiley,

@@ -2,10 +2,8 @@
 * The main template file.
 */
 get_header(); ?>
-<div class="column-wrap">
 <div id="primary" class="content-area">
-   <main id="main" class="site-main" role="main">
-<?php
+   <?php
 	if ( have_posts() ) {
 		// Start the Loop
 		while ( have_posts() ) : the_post();
@@ -19,10 +17,8 @@ get_header(); ?>
 	}else{
 		get_template_part('no-results','index');
 	}
-           ?>
-   </main><!-- #main .site-main -->
-</div>
-<!-- #primary .content-area -->
+   ?>
+ </div> <!-- #primary .content-area -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

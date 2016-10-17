@@ -14,6 +14,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*//////// Tiles - Table of Contents ////////
 *
+*  0.0 Variables
+      0.1 Colors
+      0.2 Structure
+      0.3 Typography
 *	1.0 Normalize
 *		1.1 Reset
 *		1.2 Rebuild
@@ -37,6 +41,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 *		5.2 Galleries
 *		5.3 Images
 */
+
+/*//////// 0.0 Variables ////////*/
+@import "variables/vars";
 
 /*//////// 1.0 Normalize ////////*/
 @import "normalize/normalize";
