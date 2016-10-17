@@ -776,6 +776,34 @@ h1 {
   /* Above WP toolbar. */ }
 
 /*//////// 4.0 Layouts & Structure ////////*/
+/* Sidebar - Content - Sidebar */
+.site-content {
+  overflow: hidden;
+  position: relative; }
+  @media only screen and (min-width: 1024px) {
+    .site-content {
+      margin: 0 2.5%; } }
+
+.col-1 {
+  float: left;
+  width: 21.25%;
+  margin-right: 5%; }
+
+.col-2 {
+  float: left;
+  width: 50%;
+  margin-right: 3.75%; }
+
+.last {
+  margin-right: 0; }
+
+#primary {
+  margin-left: 25%; }
+
+#secondary {
+  position: absolute;
+  left: 0; }
+
 /*//////// 5.0 Media ////////*/
 /*//////// 5.1 Captions ////////*/
 .entry-content img.wp-smiley,
